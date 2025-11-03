@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: telegram-photo-bot
+    env: python
+    plan: free
+    branch: main
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        value: YOUR_BOT_TOKEN_HERE
